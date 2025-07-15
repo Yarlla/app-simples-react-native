@@ -1,6 +1,5 @@
-import { useState } from 'react';
+    import { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Ícones do Expo
 
 export default function HomeScreen() {
   const [nome, setNome] = useState('');
@@ -16,7 +15,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Meu Primeiro App com Expo 🚀</Text>
+      <Text style={styles.titulo}>Bem-vindo à Home 🚀</Text>
 
       <TextInput
         style={styles.input}
@@ -31,14 +30,6 @@ export default function HomeScreen() {
     </View>
   );
 }
-
-// Aqui tipando manualmente pra parar o erro TS
-export const options = {
-  title: 'Tela',
-  tabBarIcon: ({ color, size }: { color: string; size: number }) => (
-    <Ionicons name="phone-portrait-outline" size={size} color={color} />
-  ),
-};
 
 const styles = StyleSheet.create({
   container: {
@@ -67,4 +58,4 @@ const styles = StyleSheet.create({
     color: '#007AFF',
     fontWeight: '500',
   },
-});   
+});
