@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'; // Ícones do Expo
 
 export default function HomeScreen() {
   const [nome, setNome] = useState('');
@@ -31,6 +32,14 @@ export default function HomeScreen() {
   );
 }
 
+// Aqui tipando manualmente pra parar o erro TS
+export const options = {
+  title: 'Tela',
+  tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+    <Ionicons name="phone-portrait-outline" size={size} color={color} />
+  ),
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -58,4 +67,4 @@ const styles = StyleSheet.create({
     color: '#007AFF',
     fontWeight: '500',
   },
-});
+});   
